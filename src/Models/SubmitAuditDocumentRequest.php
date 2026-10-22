@@ -1,13 +1,93 @@
 <?php
 
 // This file is auto-generated, don't edit it. Thanks.
-
 namespace AntChain\AITECH\Models;
 
 use AlibabaCloud\Tea\Model;
 
-class SubmitAuditDocumentRequest extends Model
-{
+class SubmitAuditDocumentRequest extends Model {
+    protected $_name = [
+        'authToken' => 'auth_token',
+        'productInstanceId' => 'product_instance_id',
+        'url' => 'url',
+        'scene' => 'scene',
+        'dataId' => 'data_id',
+        'businessId' => 'business_id',
+        'callback' => 'callback',
+        'seed' => 'seed',
+        'extendInfo' => 'extend_info',
+    ];
+    public function validate() {
+        Model::validateRequired('url', $this->url, true);
+        Model::validateRequired('scene', $this->scene, true);
+        Model::validateRequired('dataId', $this->dataId, true);
+    }
+    public function toMap() {
+        $res = [];
+        if (null !== $this->authToken) {
+            $res['auth_token'] = $this->authToken;
+        }
+        if (null !== $this->productInstanceId) {
+            $res['product_instance_id'] = $this->productInstanceId;
+        }
+        if (null !== $this->url) {
+            $res['url'] = $this->url;
+        }
+        if (null !== $this->scene) {
+            $res['scene'] = $this->scene;
+        }
+        if (null !== $this->dataId) {
+            $res['data_id'] = $this->dataId;
+        }
+        if (null !== $this->businessId) {
+            $res['business_id'] = $this->businessId;
+        }
+        if (null !== $this->callback) {
+            $res['callback'] = $this->callback;
+        }
+        if (null !== $this->seed) {
+            $res['seed'] = $this->seed;
+        }
+        if (null !== $this->extendInfo) {
+            $res['extend_info'] = $this->extendInfo;
+        }
+        return $res;
+    }
+    /**
+     * @param array $map
+     * @return SubmitAuditDocumentRequest
+     */
+    public static function fromMap($map = []) {
+        $model = new self();
+        if(isset($map['auth_token'])){
+            $model->authToken = $map['auth_token'];
+        }
+        if(isset($map['product_instance_id'])){
+            $model->productInstanceId = $map['product_instance_id'];
+        }
+        if(isset($map['url'])){
+            $model->url = $map['url'];
+        }
+        if(isset($map['scene'])){
+            $model->scene = $map['scene'];
+        }
+        if(isset($map['data_id'])){
+            $model->dataId = $map['data_id'];
+        }
+        if(isset($map['business_id'])){
+            $model->businessId = $map['business_id'];
+        }
+        if(isset($map['callback'])){
+            $model->callback = $map['callback'];
+        }
+        if(isset($map['seed'])){
+            $model->seed = $map['seed'];
+        }
+        if(isset($map['extend_info'])){
+            $model->extendInfo = $map['extend_info'];
+        }
+        return $model;
+    }
     // OAuth模式下的授权token
     /**
      * @var string
@@ -60,95 +140,5 @@ class SubmitAuditDocumentRequest extends Model
      * @var string
      */
     public $extendInfo;
-    protected $_name = [
-        'authToken'         => 'auth_token',
-        'productInstanceId' => 'product_instance_id',
-        'url'               => 'url',
-        'scene'             => 'scene',
-        'dataId'            => 'data_id',
-        'businessId'        => 'business_id',
-        'callback'          => 'callback',
-        'seed'              => 'seed',
-        'extendInfo'        => 'extend_info',
-    ];
 
-    public function validate()
-    {
-        Model::validateRequired('url', $this->url, true);
-        Model::validateRequired('scene', $this->scene, true);
-        Model::validateRequired('dataId', $this->dataId, true);
-    }
-
-    public function toMap()
-    {
-        $res = [];
-        if (null !== $this->authToken) {
-            $res['auth_token'] = $this->authToken;
-        }
-        if (null !== $this->productInstanceId) {
-            $res['product_instance_id'] = $this->productInstanceId;
-        }
-        if (null !== $this->url) {
-            $res['url'] = $this->url;
-        }
-        if (null !== $this->scene) {
-            $res['scene'] = $this->scene;
-        }
-        if (null !== $this->dataId) {
-            $res['data_id'] = $this->dataId;
-        }
-        if (null !== $this->businessId) {
-            $res['business_id'] = $this->businessId;
-        }
-        if (null !== $this->callback) {
-            $res['callback'] = $this->callback;
-        }
-        if (null !== $this->seed) {
-            $res['seed'] = $this->seed;
-        }
-        if (null !== $this->extendInfo) {
-            $res['extend_info'] = $this->extendInfo;
-        }
-
-        return $res;
-    }
-
-    /**
-     * @param array $map
-     *
-     * @return SubmitAuditDocumentRequest
-     */
-    public static function fromMap($map = [])
-    {
-        $model = new self();
-        if (isset($map['auth_token'])) {
-            $model->authToken = $map['auth_token'];
-        }
-        if (isset($map['product_instance_id'])) {
-            $model->productInstanceId = $map['product_instance_id'];
-        }
-        if (isset($map['url'])) {
-            $model->url = $map['url'];
-        }
-        if (isset($map['scene'])) {
-            $model->scene = $map['scene'];
-        }
-        if (isset($map['data_id'])) {
-            $model->dataId = $map['data_id'];
-        }
-        if (isset($map['business_id'])) {
-            $model->businessId = $map['business_id'];
-        }
-        if (isset($map['callback'])) {
-            $model->callback = $map['callback'];
-        }
-        if (isset($map['seed'])) {
-            $model->seed = $map['seed'];
-        }
-        if (isset($map['extend_info'])) {
-            $model->extendInfo = $map['extend_info'];
-        }
-
-        return $model;
-    }
 }

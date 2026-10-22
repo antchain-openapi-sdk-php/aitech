@@ -9,7 +9,7 @@
 ### Composer
 
 ```bash
-composer require antchain/aitech
+composer require antchain/AITECH
 ```
 
 ## 问题

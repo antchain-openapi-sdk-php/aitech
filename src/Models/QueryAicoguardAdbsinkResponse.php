@@ -1,13 +1,75 @@
 <?php
 
 // This file is auto-generated, don't edit it. Thanks.
-
 namespace AntChain\AITECH\Models;
 
 use AlibabaCloud\Tea\Model;
 
-class QueryAicoguardAdbsinkResponse extends Model
-{
+class QueryAicoguardAdbsinkResponse extends Model {
+    protected $_name = [
+        'reqMsgId' => 'req_msg_id',
+        'resultCode' => 'result_code',
+        'resultMsg' => 'result_msg',
+        'question' => 'question',
+        'answer' => 'answer',
+        'score' => 'score',
+        'requestId' => 'request_id',
+    ];
+    public function validate() {}
+    public function toMap() {
+        $res = [];
+        if (null !== $this->reqMsgId) {
+            $res['req_msg_id'] = $this->reqMsgId;
+        }
+        if (null !== $this->resultCode) {
+            $res['result_code'] = $this->resultCode;
+        }
+        if (null !== $this->resultMsg) {
+            $res['result_msg'] = $this->resultMsg;
+        }
+        if (null !== $this->question) {
+            $res['question'] = $this->question;
+        }
+        if (null !== $this->answer) {
+            $res['answer'] = $this->answer;
+        }
+        if (null !== $this->score) {
+            $res['score'] = $this->score;
+        }
+        if (null !== $this->requestId) {
+            $res['request_id'] = $this->requestId;
+        }
+        return $res;
+    }
+    /**
+     * @param array $map
+     * @return QueryAicoguardAdbsinkResponse
+     */
+    public static function fromMap($map = []) {
+        $model = new self();
+        if(isset($map['req_msg_id'])){
+            $model->reqMsgId = $map['req_msg_id'];
+        }
+        if(isset($map['result_code'])){
+            $model->resultCode = $map['result_code'];
+        }
+        if(isset($map['result_msg'])){
+            $model->resultMsg = $map['result_msg'];
+        }
+        if(isset($map['question'])){
+            $model->question = $map['question'];
+        }
+        if(isset($map['answer'])){
+            $model->answer = $map['answer'];
+        }
+        if(isset($map['score'])){
+            $model->score = $map['score'];
+        }
+        if(isset($map['request_id'])){
+            $model->requestId = $map['request_id'];
+        }
+        return $model;
+    }
     // 请求唯一ID，用于链路跟踪和问题排查
     /**
      * @var string
@@ -49,78 +111,5 @@ class QueryAicoguardAdbsinkResponse extends Model
      * @var string
      */
     public $requestId;
-    protected $_name = [
-        'reqMsgId'   => 'req_msg_id',
-        'resultCode' => 'result_code',
-        'resultMsg'  => 'result_msg',
-        'question'   => 'question',
-        'answer'     => 'answer',
-        'score'      => 'score',
-        'requestId'  => 'request_id',
-    ];
 
-    public function validate()
-    {
-    }
-
-    public function toMap()
-    {
-        $res = [];
-        if (null !== $this->reqMsgId) {
-            $res['req_msg_id'] = $this->reqMsgId;
-        }
-        if (null !== $this->resultCode) {
-            $res['result_code'] = $this->resultCode;
-        }
-        if (null !== $this->resultMsg) {
-            $res['result_msg'] = $this->resultMsg;
-        }
-        if (null !== $this->question) {
-            $res['question'] = $this->question;
-        }
-        if (null !== $this->answer) {
-            $res['answer'] = $this->answer;
-        }
-        if (null !== $this->score) {
-            $res['score'] = $this->score;
-        }
-        if (null !== $this->requestId) {
-            $res['request_id'] = $this->requestId;
-        }
-
-        return $res;
-    }
-
-    /**
-     * @param array $map
-     *
-     * @return QueryAicoguardAdbsinkResponse
-     */
-    public static function fromMap($map = [])
-    {
-        $model = new self();
-        if (isset($map['req_msg_id'])) {
-            $model->reqMsgId = $map['req_msg_id'];
-        }
-        if (isset($map['result_code'])) {
-            $model->resultCode = $map['result_code'];
-        }
-        if (isset($map['result_msg'])) {
-            $model->resultMsg = $map['result_msg'];
-        }
-        if (isset($map['question'])) {
-            $model->question = $map['question'];
-        }
-        if (isset($map['answer'])) {
-            $model->answer = $map['answer'];
-        }
-        if (isset($map['score'])) {
-            $model->score = $map['score'];
-        }
-        if (isset($map['request_id'])) {
-            $model->requestId = $map['request_id'];
-        }
-
-        return $model;
-    }
 }

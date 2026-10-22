@@ -7,7 +7,7 @@ English | [简体中文](README-CN.md)
 ### Composer
 
 ```bash
-composer require antchain/aitech
+composer require antchain/AITECH
 ```
 
 ## Issues

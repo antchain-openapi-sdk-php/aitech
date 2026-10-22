@@ -1,13 +1,100 @@
 <?php
 
 // This file is auto-generated, don't edit it. Thanks.
-
 namespace AntChain\AITECH\Models;
 
 use AlibabaCloud\Tea\Model;
 
-class CheckGuardAnswerRequest extends Model
-{
+class CheckGuardAnswerRequest extends Model {
+    protected $_name = [
+        'authToken' => 'auth_token',
+        'productInstanceId' => 'product_instance_id',
+        'appCode' => 'app_code',
+        'businessId' => 'business_id',
+        'content' => 'content',
+        'sceneCode' => 'scene_code',
+        'flowDetect' => 'flow_detect',
+        'sessionId' => 'session_id',
+        'replyProxy' => 'reply_proxy',
+        'privacyDataObfuscation' => 'privacy_data_obfuscation',
+    ];
+    public function validate() {
+        Model::validateRequired('appCode', $this->appCode, true);
+        Model::validateRequired('content', $this->content, true);
+        Model::validateRequired('sceneCode', $this->sceneCode, true);
+    }
+    public function toMap() {
+        $res = [];
+        if (null !== $this->authToken) {
+            $res['auth_token'] = $this->authToken;
+        }
+        if (null !== $this->productInstanceId) {
+            $res['product_instance_id'] = $this->productInstanceId;
+        }
+        if (null !== $this->appCode) {
+            $res['app_code'] = $this->appCode;
+        }
+        if (null !== $this->businessId) {
+            $res['business_id'] = $this->businessId;
+        }
+        if (null !== $this->content) {
+            $res['content'] = $this->content;
+        }
+        if (null !== $this->sceneCode) {
+            $res['scene_code'] = $this->sceneCode;
+        }
+        if (null !== $this->flowDetect) {
+            $res['flow_detect'] = $this->flowDetect;
+        }
+        if (null !== $this->sessionId) {
+            $res['session_id'] = $this->sessionId;
+        }
+        if (null !== $this->replyProxy) {
+            $res['reply_proxy'] = $this->replyProxy;
+        }
+        if (null !== $this->privacyDataObfuscation) {
+            $res['privacy_data_obfuscation'] = $this->privacyDataObfuscation;
+        }
+        return $res;
+    }
+    /**
+     * @param array $map
+     * @return CheckGuardAnswerRequest
+     */
+    public static function fromMap($map = []) {
+        $model = new self();
+        if(isset($map['auth_token'])){
+            $model->authToken = $map['auth_token'];
+        }
+        if(isset($map['product_instance_id'])){
+            $model->productInstanceId = $map['product_instance_id'];
+        }
+        if(isset($map['app_code'])){
+            $model->appCode = $map['app_code'];
+        }
+        if(isset($map['business_id'])){
+            $model->businessId = $map['business_id'];
+        }
+        if(isset($map['content'])){
+            $model->content = $map['content'];
+        }
+        if(isset($map['scene_code'])){
+            $model->sceneCode = $map['scene_code'];
+        }
+        if(isset($map['flow_detect'])){
+            $model->flowDetect = $map['flow_detect'];
+        }
+        if(isset($map['session_id'])){
+            $model->sessionId = $map['session_id'];
+        }
+        if(isset($map['reply_proxy'])){
+            $model->replyProxy = $map['reply_proxy'];
+        }
+        if(isset($map['privacy_data_obfuscation'])){
+            $model->privacyDataObfuscation = $map['privacy_data_obfuscation'];
+        }
+        return $model;
+    }
     // OAuth模式下的授权token
     /**
      * @var string
@@ -73,102 +160,5 @@ class CheckGuardAnswerRequest extends Model
      * @var string
      */
     public $privacyDataObfuscation;
-    protected $_name = [
-        'authToken'              => 'auth_token',
-        'productInstanceId'      => 'product_instance_id',
-        'appCode'                => 'app_code',
-        'businessId'             => 'business_id',
-        'content'                => 'content',
-        'sceneCode'              => 'scene_code',
-        'flowDetect'             => 'flow_detect',
-        'sessionId'              => 'session_id',
-        'replyProxy'             => 'reply_proxy',
-        'privacyDataObfuscation' => 'privacy_data_obfuscation',
-    ];
 
-    public function validate()
-    {
-        Model::validateRequired('appCode', $this->appCode, true);
-        Model::validateRequired('content', $this->content, true);
-        Model::validateRequired('sceneCode', $this->sceneCode, true);
-    }
-
-    public function toMap()
-    {
-        $res = [];
-        if (null !== $this->authToken) {
-            $res['auth_token'] = $this->authToken;
-        }
-        if (null !== $this->productInstanceId) {
-            $res['product_instance_id'] = $this->productInstanceId;
-        }
-        if (null !== $this->appCode) {
-            $res['app_code'] = $this->appCode;
-        }
-        if (null !== $this->businessId) {
-            $res['business_id'] = $this->businessId;
-        }
-        if (null !== $this->content) {
-            $res['content'] = $this->content;
-        }
-        if (null !== $this->sceneCode) {
-            $res['scene_code'] = $this->sceneCode;
-        }
-        if (null !== $this->flowDetect) {
-            $res['flow_detect'] = $this->flowDetect;
-        }
-        if (null !== $this->sessionId) {
-            $res['session_id'] = $this->sessionId;
-        }
-        if (null !== $this->replyProxy) {
-            $res['reply_proxy'] = $this->replyProxy;
-        }
-        if (null !== $this->privacyDataObfuscation) {
-            $res['privacy_data_obfuscation'] = $this->privacyDataObfuscation;
-        }
-
-        return $res;
-    }
-
-    /**
-     * @param array $map
-     *
-     * @return CheckGuardAnswerRequest
-     */
-    public static function fromMap($map = [])
-    {
-        $model = new self();
-        if (isset($map['auth_token'])) {
-            $model->authToken = $map['auth_token'];
-        }
-        if (isset($map['product_instance_id'])) {
-            $model->productInstanceId = $map['product_instance_id'];
-        }
-        if (isset($map['app_code'])) {
-            $model->appCode = $map['app_code'];
-        }
-        if (isset($map['business_id'])) {
-            $model->businessId = $map['business_id'];
-        }
-        if (isset($map['content'])) {
-            $model->content = $map['content'];
-        }
-        if (isset($map['scene_code'])) {
-            $model->sceneCode = $map['scene_code'];
-        }
-        if (isset($map['flow_detect'])) {
-            $model->flowDetect = $map['flow_detect'];
-        }
-        if (isset($map['session_id'])) {
-            $model->sessionId = $map['session_id'];
-        }
-        if (isset($map['reply_proxy'])) {
-            $model->replyProxy = $map['reply_proxy'];
-        }
-        if (isset($map['privacy_data_obfuscation'])) {
-            $model->privacyDataObfuscation = $map['privacy_data_obfuscation'];
-        }
-
-        return $model;
-    }
 }
